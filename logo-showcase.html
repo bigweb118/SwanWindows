@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>门窗品牌 SWG Logo 设计方案与交互展示 - Swan Windows</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0A1312;
+      --card-bg-dark: rgba(18, 32, 30, 0.75);
+      --card-border-dark: rgba(212, 175, 55, 0.2);
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --gold-accent: #D4AF37;
+      --gold-hover: #FCEBB6;
+      --emerald-dark: #0F3832;
+      --emerald-accent: #16524A;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow-glow: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans SC', -apple-system, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #152A27 0%, #0A1312 70%);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 30px;
+      color: var(--gold-accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FFFFFF 30%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Controls bar */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 14px 24px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .bg-switcher {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bg-switcher span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .bg-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .bg-btn.active {
+      border-color: var(--gold-accent);
+      transform: scale(1.15);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+
+    .bg-btn-dark { background: #0A1312; }
+    .bg-btn-light { background: #FFFFFF; }
+    .bg-btn-emerald { background: #0F3832; }
+    .bg-btn-transparent { 
+      background-image: linear-gradient(45deg, #222 25%, transparent 25%), linear-gradient(-45deg, #222 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #222 75%), linear-gradient(-45deg, transparent 75%, #222 75%);
+      background-size: 10px 10px;
+      background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+      background-color: #333;
+    }
+
+    /* Grid Layout */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 32px;
+    }
+
+    @media (max-width: 640px) {
+      .logo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .logo-card {
+      background: var(--card-bg-dark);
+      border: 1px solid var(--card-border-dark);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .concept-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      letter-spacing: 1px;
+    }
+
+    .concept-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 2px;
+    }
+
+    /* Preview Canvas Area */
+    .preview-canvas {
+      padding: 40px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      transition: background 0.3s ease;
+      background: var(--bg-dark);
+    }
+
+    .preview-canvas svg {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+    }
+
+    .card-body {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .description {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .feature-tag {
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      color: #CBD5E1;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+      color: #0F172A;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #FCEBB6 0%, #D4AF37 100%);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #D4AF37;
+      color: #0A1312;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Modal for Code View */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: #0F172A;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 780px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    pre {
+      background: #020617;
+      padding: 16px;
+      border-radius: 8px;
+      color: #38BDF8;
+      font-family: monospace;
+      font-size: 0.85rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">SWANVIEW ARCHITECTURAL DOORS &amp; WINDOWS</div>
+      <h1>门窗品牌矢量 SWG Logo 设计方案</h1>
+      <p class="subtitle">融合现代建筑美学、断桥铝型材精工与天鹅视野意象，为您量身打造 4 款高端矢量 Logo 方案</p>
+    </header>
+
+    <!-- Context / Design Controls -->
+    <div class="controls-bar">
+      <div class="bg-switcher">
+        <span>画布背景切换：</span>
+        <button class="bg-btn bg-btn-dark active" title="深色背景" onclick="changeBg('#0A1312', this)"></button>
+        <button class="bg-btn bg-btn-emerald" title="墨绿品牌色" onclick="changeBg('#0F3832', this)"></button>
+        <button class="bg-btn bg-btn-light" title="浅色高反差" onclick="changeBg('#FFFFFF', this)"></button>
+        <button class="bg-btn bg-btn-transparent" title="棋盘透明度" onclick="changeBg('transparent', this)"></button>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--gold-accent); font-weight: 600;">
+        ⚡ 纯矢量 SWG 架构 · 无损放大 · 支持网页与印制
+      </div>
+    </div>
+
+    <!-- Logo Grid -->
+    <div class="logo-grid">
+
+      <!-- CONCEPT 1 -->
+      <div class="logo-card">
+        <div class="card-header">
+          <div>
+            <div class="concept-tag">CONCEPT 01</div>
+            <div class="concept-title">天鹅羽翼与门窗架构 (Swan & Arch View)</div>
+          </div>
+        </div>
+        <div class="preview-canvas" id="canvas-1">
+          <img src="images/logo-swan-view.svg" alt="Concept 1 Logo" width="520" height="120" id="img-1">
+        </div>
+        <div class="card-body">
+          <div class="description">
+            将天鹅优雅的 S 型流线羽翼与德式门窗立面的 V 型透视框线融合。四角外框寓意高精度铝合金系统门窗，中心的黄金线描勾勒出“向光而开”的通透视野。
+          </div>
+          <div class="features-list">
+            <span class="feature-tag">优雅尊贵</span>
+            <span class="feature-tag">香槟金 & 墨绿</span>
+            <span class="feature-tag">S&amp;V 巧妙嵌套</span>
+            <span class="feature-tag">双层中空玻璃拟态</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="copySvgCode('images/logo-swan-view.svg')">
+              📋 复制 SWG 代码
+            </button>
+            <a href="images/logo-swan-view.svg" download="Swan-Logo-Concept1.svg" class="btn btn-secondary">
+              ⬇️ 下载 SWG
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 2 -->
+      <div class="logo-card">
+        <div class="card-header">
+          <div>
+            <div class="concept-tag">CONCEPT 02</div>
+            <div class="concept-title">极简折角双门窗 (Geometric SW Open Door)</div>
+          </div>
+        </div>
+        <div class="preview-canvas" id="canvas-2">
+          <img src="images/logo-geometric-door.svg" alt="Concept 2 Logo" width="520" height="120" id="img-2">
+        </div>
+        <div class="card-body">
+          <div class="description">
+            采用立体几何线条构筑 S 与 V 的正负空间，模拟平开门与折叠推拉窗开启时的空间交错感。冰蓝与深天蓝的搭配凸显科技感与系统门窗的高密闭性能。
+          </div>
+          <div class="features-list">
+            <span class="feature-tag">现代极简</span>
+            <span class="feature-tag">深空蓝 & 冰蓝</span>
+            <span class="feature-tag">推拉/平开门窗正负形</span>
+            <span class="feature-tag">建筑立体几何</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="copySvgCode('images/logo-geometric-door.svg')">
+              📋 复制 SWG 代码
+            </button>
+            <a href="images/logo-geometric-door.svg" download="Swan-Logo-Concept2.svg" class="btn btn-secondary">
+              ⬇️ 下载 SWG
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 3 -->
+      <div class="logo-card">
+        <div class="card-header">
+          <div>
+            <div class="concept-tag">CONCEPT 03</div>
+            <div class="concept-title">窗外盛景·晨曦框景 (Modern Horizon View)</div>
+          </div>
+        </div>
+        <div class="preview-canvas" id="canvas-3">
+          <img src="images/logo-window-frame.svg" alt="Concept 3 Logo" width="520" height="120" id="img-3">
+        </div>
+        <div class="card-body">
+          <div class="description">
+            借景“框景”设计，双扇法式大落地窗框架开启，迎面展现暖阳与天鹅掠过水面的清晨美景。寓意每一扇门窗均为大宅开辟大视野与高品位生活。
+          </div>
+          <div class="features-list">
+            <span class="feature-tag">温暖奢华</span>
+            <span class="feature-tag">暖阳琥珀金</span>
+            <span class="feature-tag">双扇门窗立面</span>
+            <span class="feature-tag">框景意境</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="copySvgCode('images/logo-window-frame.svg')">
+              📋 复制 SWG 代码
+            </button>
+            <a href="images/logo-window-frame.svg" download="Swan-Logo-Concept3.svg" class="btn btn-secondary">
+              ⬇️ 下载 SWG
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONCEPT 4 -->
+      <div class="logo-card">
+        <div class="card-header">
+          <div>
+            <div class="concept-tag">CONCEPT 04</div>
+            <div class="concept-title">精工压条铝材切面 (Precision Thermal Profile Monogram)</div>
+          </div>
+        </div>
+        <div class="preview-canvas" id="canvas-4">
+          <img src="images/logo-profile-monogram.svg" alt="Concept 4 Logo" width="520" height="120" id="img-4">
+        </div>
+        <div class="card-body">
+          <div class="description">
+            硬朗的工业精工风格，灵感来源于断桥铝隔热型材的内部多腔体截面与咬合扣件。S 与 V 以铝型材槽口与隔热条形式互相紧锁，彰显德系工程工艺的极致严谨。
+          </div>
+          <div class="features-list">
+            <span class="feature-tag">德系精工</span>
+            <span class="feature-tag">钛金黑 & 铬银</span>
+            <span class="feature-tag">断桥隔热腔体截面</span>
+            <span class="feature-tag">强悍安全属性</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="copySvgCode('images/logo-profile-monogram.svg')">
+              📋 复制 SWG 代码
+            </button>
+            <a href="images/logo-profile-monogram.svg" download="Swan-Logo-Concept4.svg" class="btn btn-secondary">
+              ⬇️ 下载 SWG
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">SWG 代码已成功复制到剪贴板！</div>
+
+  <!-- Modal Code Viewer -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 style="color: white; font-size: 1.1rem;" id="modalTitle">SWG 源码</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="svgCodeDisplay"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeBg(color, btn) {
+      document.querySelectorAll('.bg-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const canvases = document.querySelectorAll('.preview-canvas');
+      canvases.forEach(c => {
+        if (color === 'transparent') {
+          c.style.background = 'linear-gradient(45deg, #181818 25%, transparent 25%), linear-gradient(-45deg, #181818 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #181818 75%), linear-gradient(-45deg, transparent 75%, #181818 75%)';
+          c.style.backgroundSize = '16px 16px';
+          c.style.backgroundColor = '#111';
+        } else {
+          c.style.background = color;
+          c.style.backgroundImage = 'none';
+        }
+      });
+    }
+
+    async function copySvgCode(filePath) {
+      try {
+        const response = await fetch(filePath);
+        const code = await text = await response.text();
+        await navigator.clipboard.writeText(code);
+        
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      } catch (err) {
+        alert('无法读取文件，请通过“下载 SWG”获取文件');
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="emeraldGradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F3832" />
+      <stop offset="50%" stop-color="#16524A" />
+      <stop offset="100%" stop-color="#08221E" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEBB6" />
+      <stop offset="30%" stop-color="#E5C158" />
+      <stop offset="70%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#967212" />
+    </linearGradient>
+
+    <linearGradient id="glassGradIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80DEEA" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00ACC1" stop-opacity="0.05" />
+    </linearGradient>
+    
+    <filter id="shadowIcon" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0A1A17" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Frame -->
+  <rect x="4" y="4" width="92" height="92" rx="18" fill="url(#emeraldGradIcon)" stroke="url(#goldGradIcon)" stroke-width="2.5" filter="url(#shadowIcon)"/>
+  
+  <!-- Window Grid Accent Lines -->
+  <line x1="50" y1="4" x2="50" y2="96" stroke="url(#goldGradIcon)" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 3"/>
+  <line x1="4" y1="50" x2="96" y2="50" stroke="url(#goldGradIcon)" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 3"/>
+  
+  <!-- Glass Reflection Highlights -->
+  <polygon points="12,12 44,12 44,44 12,44" fill="url(#glassGradIcon)"/>
+  <polygon points="56,56 88,56 88,88 56,88" fill="url(#glassGradIcon)"/>
+
+  <!-- Left Wing / S-Curve -->
+  <path d="M 26 74 C 20 48, 38 32, 52 24 C 64 18, 76 22, 74 34 C 72 44, 56 52, 42 60 C 34 65, 30 74, 46 75 C 58 76, 74 68, 80 64" 
+        stroke="url(#goldGradIcon)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Door Frame Opening Angle -->
+  <path d="M 52 24 L 78 80 L 64 80 L 44 34 Z" fill="url(#goldGradIcon)" opacity="0.85"/>
+  
+  <!-- Door Handle / Lock Pivot Dot -->
+  <circle cx="50" cy="50" r="3.5" fill="#FFFFFF"/>
+  <circle cx="50" cy="50" r="1.8" fill="#0F3832"/>
+</svg>

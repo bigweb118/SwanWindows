@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="amberGradIcon3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <linearGradient id="darkBgIcon3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A" />
+      <stop offset="100%" stop-color="#18181B" />
+    </linearGradient>
+
+    <linearGradient id="sunGradIcon3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.1" />
+    </linearGradient>
+
+    <filter id="shadowIcon3" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Window Outer Rim -->
+  <rect x="4" y="4" width="92" height="92" rx="18" fill="url(#darkBgIcon3)" stroke="url(#amberGradIcon3)" stroke-width="2.5" filter="url(#shadowIcon3)"/>
+
+  <!-- Sun Ray Horizon (View through Window) -->
+  <path d="M 12 68 Q 50 38 88 68 L 88 88 H 12 Z" fill="url(#sunGradIcon3)"/>
+  <circle cx="50" cy="52" r="16" fill="url(#amberGradIcon3)" opacity="0.85"/>
+
+  <!-- Double Window/Door Frame Silhouette -->
+  <!-- Left Casement Frame -->
+  <rect x="16" y="16" width="30" height="68" rx="4" stroke="url(#amberGradIcon3)" stroke-width="2" fill="none"/>
+  <!-- Right Casement Frame -->
+  <rect x="54" y="16" width="30" height="68" rx="4" stroke="url(#amberGradIcon3)" stroke-width="2" fill="none"/>
+
+  <!-- Door Handles -->
+  <line x1="42" y1="46" x2="42" y2="56" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="58" y1="46" x2="58" y2="56" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Minimal Swan Curve Silhouette Over Horizon -->
+  <path d="M 32 64 C 40 56, 52 50, 68 54" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+</svg>

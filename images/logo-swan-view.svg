@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Brand Color Gradients -->
+    <linearGradient id="emeraldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F3832" />
+      <stop offset="50%" stop-color="#16524A" />
+      <stop offset="100%" stop-color="#08221E" />
+    </linearGradient>
+    
+    <linearGradient id="goldGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEBB6" />
+      <stop offset="30%" stop-color="#E5C158" />
+      <stop offset="70%" stop-color="#C59B27" />
+      <stop offset="100%" stop-color="#967212" />
+    </linearGradient>
+
+    <linearGradient id="glassGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80DEEA" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00ACC1" stop-opacity="0.05" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B27" />
+      <stop offset="50%" stop-color="#FCEBB6" />
+      <stop offset="100%" stop-color="#C59B27" opacity="0.2"/>
+    </linearGradient>
+    
+    <filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0A1A17" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- LOGO ICON MARK (Swan & Door/Window Silhouette) -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Frame (Aluminium Profile Representation) -->
+    <rect x="4" y="4" width="92" height="92" rx="18" fill="url(#emeraldGrad1)" stroke="url(#goldGrad1)" stroke-width="2.5" filter="url(#shadow1)"/>
+    
+    <!-- Window Grid Accent Lines -->
+    <line x1="50" y1="4" x2="50" y2="96" stroke="url(#goldGrad1)" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 3"/>
+    <line x1="4" y1="50" x2="96" y2="50" stroke="url(#goldGrad1)" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 3"/>
+    
+    <!-- Glass Reflection Highlights -->
+    <polygon points="12,12 44,12 44,44 12,44" fill="url(#glassGrad1)"/>
+    <polygon points="56,56 88,56 88,88 56,88" fill="url(#glassGrad1)"/>
+
+    <!-- Left Wing / S-Curve (Swan Neck + Window Arch) -->
+    <path d="M 26 74 C 20 48, 38 32, 52 24 C 64 18, 76 22, 74 34 C 72 44, 56 52, 42 60 C 34 65, 30 74, 46 75 C 58 76, 74 68, 80 64" 
+          stroke="url(#goldGrad1)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          
+    <!-- Door Frame Opening Angle ('V' Shape & Perspective Door Panel) -->
+    <path d="M 52 24 L 78 80 L 64 80 L 44 34 Z" fill="url(#goldGrad1)" opacity="0.85"/>
+    
+    <!-- Door Handle / Lock Pivot Dot -->
+    <circle cx="50" cy="50" r="3.5" fill="#FFFFFF"/>
+    <circle cx="50" cy="50" r="1.8" fill="#0F3832"/>
+  </g>
+
+  <!-- LOGO TYPOGRAPHY -->
+  <g transform="translate(125, 30)">
+    <!-- Primary Brand Name -->
+    <text x="0" y="34" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="36" font-weight="800" letter-spacing="-0.5" fill="#0F3832">
+      Swan
+    </text>
+    
+    <!-- Subtitle / Business Focus -->
+    <text x="0" y="60" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="3.5" fill="#C59B27">
+      WINDOWS &amp; DOORS
+    </text>
+    
+    <!-- German Engineering Badge / Tagline -->
+    <text x="280" y="60" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1.5" fill="#5A7570">
+      GERMAN SYSTEMS
+    </text>
+    
+    <!-- Divider Line -->
+    <line x1="0" y1="72" x2="415" y2="72" stroke="url(#accentGrad1)" stroke-width="1.5"/>
+  </g>
+</svg>
