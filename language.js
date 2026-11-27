@@ -34,6 +34,12 @@ languageButtons.forEach((button) => {
 });
 
 const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+if (urlLanguage === "zh") {
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical && canonical.href && !canonical.href.includes("lang=zh")) {
+    canonical.href = `${canonical.href.split("?")[0]}?lang=zh`;
+  }
+}
 setLanguage(urlLanguage || localStorage.getItem("site-language") || "en");
 
 /* ==========================================================================

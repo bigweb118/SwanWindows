@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /logo-showcase.html
+Disallow: /functions/
 
 Sitemap: https://www.swanwindows.com.au/sitemap.xml
