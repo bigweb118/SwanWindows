@@ -125,6 +125,99 @@ class InstantPriceEstimator {
   }
 }
 
+// Direct Contact Fallback Links (WhatsApp & Email) to prevent lost leads
+const DIRECT_WHATSAPP_NUMBER = "61461324967";
+const DIRECT_CONTACT_EMAIL = "info@swanwindows.com.au";
+
+function buildDirectInquiryLinks(formData, lang) {
+  const isZh = lang === "zh";
+  const lines = [
+    isZh ? "您好 Swan Windows，我想咨询门窗报价：" : "Hi Swan Windows, I would like to request a quote:",
+    `${isZh ? "姓名" : "Name"}: ${formData.name || "-"}`,
+    `${isZh ? "电话/WhatsApp" : "Phone / WhatsApp"}: ${formData.phone || "-"}`,
+    `${isZh ? "邮箱" : "Email"}: ${formData.email || "-"}`,
+    `${isZh ? "项目位置" : "Project Location"}: ${formData.location || "-"}`,
+    `${isZh ? "项目类型" : "Project Type"}: ${formData.projectType || "-"}`,
+    `${isZh ? "需求说明" : "Message"}: ${formData.message || "-"}`
+  ];
+  const bodyText = lines.join("\n");
+  const subject = isZh
+    ? `Swan Windows 门窗报价咨询 - ${formData.name || "客户"}`
+    : `Swan Windows Quote Inquiry - ${formData.name || "Client"}`;
+
+  return {
+    whatsappUrl: `https://wa.me/${DIRECT_WHATSAPP_NUMBER}?text=${encodeURIComponent(bodyText)}`,
+    mailtoUrl: `mailto:${DIRECT_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`
+  };
+}
+
+function showQuoteError(quoteForm, formData, result) {
+  const lang = document.documentElement.dataset.lang === "zh" ? "zh" : "en";
+  const { whatsappUrl, mailtoUrl } = buildDirectInquiryLinks(formData, lang);
+
+  let errorBox = quoteForm.querySelector(".quote-form-error");
+  if (!errorBox) {
+    errorBox = document.createElement("div");
+    errorBox.className = "quote-form-error full";
+    errorBox.setAttribute("role", "alert");
+    quoteForm.appendChild(errorBox);
+  }
+
+  const titleEn = result?.isTimeout
+    ? "Submission timed out — your details are still here"
+    : "Online submission failed — please send directly";
+  const titleZh = result?.isTimeout
+    ? "在线提交超时 — 您填写的内容已保留"
+    : "在线提交暂时失败 — 请一键直发防漏单";
+
+  const descEn = "Our online email service could not confirm your request right now. To make sure we don't miss your inquiry, send your pre-filled details directly via WhatsApp or Email in one click:";
+  const descZh = "当前在线邮件服务未能确认接收您的询价。为避免漏单，您可以直接点击下方按钮，将已填好的信息一键通过 WhatsApp 或邮箱发送给我们：";
+
+  errorBox.replaceChildren();
+
+  const titleEl = document.createElement("strong");
+  titleEl.className = "quote-error-title";
+  titleEl.dataset.en = titleEn;
+  titleEl.dataset.zh = titleZh;
+  titleEl.textContent = lang === "zh" ? titleZh : titleEn;
+
+  const descEl = document.createElement("p");
+  descEl.className = "quote-error-desc";
+  descEl.dataset.en = descEn;
+  descEl.dataset.zh = descZh;
+  descEl.textContent = lang === "zh" ? descZh : descEn;
+
+  const actionsEl = document.createElement("div");
+  actionsEl.className = "quote-error-actions";
+
+  const waLink = document.createElement("a");
+  waLink.className = "quote-fallback-btn quote-fallback-whatsapp";
+  waLink.href = whatsappUrl;
+  waLink.target = "_blank";
+  waLink.rel = "noopener noreferrer";
+  waLink.dataset.en = "Send via WhatsApp →";
+  waLink.dataset.zh = "一键 WhatsApp 直发 →";
+  waLink.textContent = lang === "zh" ? waLink.dataset.zh : waLink.dataset.en;
+
+  const emailLink = document.createElement("a");
+  emailLink.className = "quote-fallback-btn quote-fallback-email";
+  emailLink.href = mailtoUrl;
+  emailLink.dataset.en = "Send via Email →";
+  emailLink.dataset.zh = "一键邮箱直发 →";
+  emailLink.textContent = lang === "zh" ? emailLink.dataset.zh : emailLink.dataset.en;
+
+  actionsEl.append(waLink, emailLink);
+  errorBox.append(titleEl, descEl, actionsEl);
+  errorBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function hideQuoteError(quoteForm) {
+  const errorBox = quoteForm.querySelector(".quote-form-error");
+  if (errorBox) {
+    errorBox.remove();
+  }
+}
+
 // High-Speed Edge Form Submitter via Cloudflare Pages Function & Resend
 async function sendServerlessForm(payloadData) {
   const payload = {
@@ -137,30 +230,38 @@ async function sendServerlessForm(payloadData) {
   };
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 6000);
+  const timeoutId = setTimeout(() => controller.abort(), 10000);
 
   try {
     const res = await fetch("/api/send-quote", {
       method: "POST",
-      headers: { 
-        "Content-Type": "application/json", 
-        "Accept": "application/json" 
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       body: JSON.stringify(payload),
       signal: controller.signal
     });
-    
+
     clearTimeout(timeoutId);
-    
-    if (!res.ok) {
-      console.warn("Resend Edge API returned status:", res.status);
+
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data || data.success !== true) {
+      const errorMsg = (data && (data.error || data.warning)) || `HTTP ${res.status}`;
+      console.error("Resend Edge API failed:", res.status, data);
+      return { success: false, status: res.status, error: errorMsg };
     }
-    const data = await res.json().catch(() => ({ success: true, simulated: true }));
+
     return data;
   } catch (err) {
     clearTimeout(timeoutId);
-    console.warn("Edge API network note / fallback:", err);
-    return { success: true, simulated: true };
+    const isTimeout = err && err.name === "AbortError";
+    console.error("Edge API network/timeout error:", err);
+    return {
+      success: false,
+      isTimeout,
+      error: (err && err.message) || "Network request failed"
+    };
   }
 }
 
@@ -266,6 +367,8 @@ Estimated Budget: ${estTransferBtn.dataset.price || ""}`;
     quoteForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
+      hideQuoteError(quoteForm);
+
       const submitBtn = quoteForm.querySelector("button[type='submit']");
       const origText = submitBtn ? submitBtn.textContent : "Submit";
 
@@ -283,20 +386,24 @@ Estimated Budget: ${estTransferBtn.dataset.price || ""}`;
         message: quoteForm.querySelector("[name='message']")?.value || quoteForm.querySelector("#formNotes")?.value || quoteForm.querySelector("[name='notes']")?.value || ""
       };
 
-      await sendServerlessForm(formData);
+      const result = await sendServerlessForm(formData);
 
       if (submitBtn) {
+        const currentLang = document.documentElement.dataset.lang === "zh" ? "zh" : "en";
         submitBtn.disabled = false;
-        submitBtn.textContent = origText;
+        submitBtn.textContent = submitBtn.dataset[currentLang] || origText;
       }
 
-      if (quoteModal) {
-        quoteModal.classList.add("is-open");
+      if (result && result.success === true) {
+        if (quoteModal) {
+          quoteModal.classList.add("is-open");
+        } else {
+          alert(document.documentElement.dataset.lang === "zh" ? "您的询价申请已成功发送！我们将于24小时内联系您。" : "Thank you! Your quote request has been sent successfully.");
+        }
+        quoteForm.reset();
       } else {
-        alert(document.documentElement.dataset.lang === "zh" ? "您的询价申请已成功发送！我们将于24小时内联系您。" : "Thank you! Your quote request has been sent successfully.");
+        showQuoteError(quoteForm, formData, result);
       }
-
-      quoteForm.reset();
     });
 
     if (closeModalBtn && quoteModal) {

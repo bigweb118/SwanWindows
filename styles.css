@@ -825,6 +825,64 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.quote-form-error {
+  margin-top: 6px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: var(--white);
+  display: grid;
+  gap: 10px;
+}
+
+.quote-error-title {
+  font-size: 14px;
+  font-weight: 760;
+  color: #fecaca;
+}
+
+.quote-error-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.quote-error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.quote-fallback-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 760;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.quote-fallback-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+.quote-fallback-whatsapp {
+  background: #25d366;
+  color: #0b2217;
+}
+
+.quote-fallback-email {
+  background: var(--gold);
+  color: #10231f;
+}
+
 .footer {
   display: flex;
   align-items: center;

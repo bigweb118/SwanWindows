@@ -26,13 +26,12 @@ export async function onRequestPost(context) {
     const apiKey = env.RESEND_API_KEY;
     if (!apiKey) {
       console.warn("RESEND_API_KEY not configured in Cloudflare Pages environment variables.");
-      // Return clear guide response so frontend can still complete gracefully
       return new Response(JSON.stringify({
         success: false,
-        warning: "RESEND_API_KEY is not configured in Cloudflare Pages environment variables.",
-        simulated: true
+        error: "Email service is not configured on the server.",
+        warning: "RESEND_API_KEY is not configured in Cloudflare Pages environment variables."
       }), {
-        status: 200,
+        status: 503,
         headers: corsHeaders
       });
     }
@@ -48,12 +47,12 @@ export async function onRequestPost(context) {
 
     // Resend email sender & receiver configuration
     // Since your domain (swanwindows.com.au) is verified in Resend, use it as the 'from' sender!
-    const fromEmail = env.RESEND_FROM_EMAIL || "SwanView Quotes <quotes@swanwindows.com.au>";
+    const fromEmail = env.RESEND_FROM_EMAIL || "Swan Windows <quotes@swanwindows.com.au>";
     // Receiver(s): supports comma-separated emails so both info and dhlwing can receive
     const rawTo = env.RESEND_TO_EMAIL || "info@swanwindows.com.au, dhlwing@gmail.com";
     const toRecipients = rawTo.split(",").map(e => e.trim()).filter(Boolean);
 
-    // Clean, professional HTML email format for SwanView Windows team
+    // Clean, professional HTML email format for Swan Windows team
     const htmlBody = `
 <!DOCTYPE html>
 <html>
@@ -79,7 +78,7 @@ export async function onRequestPost(context) {
 <body>
   <div class="card">
     <div class="header">
-      <h1>SwanView Windows — Quote Inquiry</h1>
+      <h1>Swan Windows — Quote Inquiry</h1>
       <p>New Website Lead Received</p>
     </div>
     <div class="content">
@@ -112,7 +111,7 @@ export async function onRequestPost(context) {
       </div>
     </div>
     <div class="footer">
-      Delivered via SwanView Cloudflare Edge & Resend Engine
+      Delivered via Swan Windows Cloudflare Edge & Resend Engine
     </div>
   </div>
 </body>
@@ -123,7 +122,7 @@ export async function onRequestPost(context) {
       from: fromEmail,
       to: toRecipients.length > 0 ? toRecipients : ["info@swanwindows.com.au"],
       reply_to: (email && email.includes("@")) ? email : undefined,
-      subject: `[SwanView Quote] ${name} - ${location} (${projectType})`,
+      subject: `[Swan Windows Quote] ${name} - ${location} (${projectType})`,
       html: htmlBody
     };
 
