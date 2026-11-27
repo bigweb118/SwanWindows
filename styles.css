@@ -29,6 +29,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -1917,6 +1918,7 @@ body.apple-showcase-body .footer-links a:hover {
 
 .apple-hero-img {
   width: 100%;
+  height: auto;
   border-radius: 16px;
   display: block;
 }
@@ -2056,6 +2058,7 @@ body.apple-showcase-body .footer-links a:hover {
 
 .engineering-profile-img {
   width: 100%;
+  height: auto;
   border-radius: 16px;
   display: block;
 }
