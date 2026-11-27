@@ -2093,11 +2093,11 @@ body.apple-showcase-body .footer-links a:hover {
   border-color: var(--gold);
 }
 
-.pin-1 { top: 38%; left: 45%; }
-.pin-2 { top: 22%; left: 28%; }
-.pin-3 { top: 52%; left: 52%; }
-.pin-4 { top: 68%; left: 35%; }
-.pin-5 { top: 28%; left: 75%; }
+.engineering-visual-card .pin-1 { top: 44%; left: 48%; }
+.engineering-visual-card .pin-2 { top: 30%; left: 37%; }
+.engineering-visual-card .pin-3 { top: 50%; left: 55%; }
+.engineering-visual-card .pin-4 { top: 66%; left: 42%; }
+.engineering-visual-card .pin-5 { top: 49%; left: 73%; }
 
 /* Tab details panel */
 .tab-header {
