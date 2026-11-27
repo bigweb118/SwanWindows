@@ -70,11 +70,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Switch between a standard 115mm aluminium frame and the 45mm Lambda WS 075 IS slim frame to see the immediate architectural glass gain.",
     demoDescZh: "点击切换传统 115mm 宽框与 45mm Lambda WS 075 IS 极窄框，实时对比玻璃通透度与视野增益。",
     hotspots: [
-      { x: 24, y: 34, titleEn: "45mm Concealed-Rebate Frame", titleZh: "45mm 极窄可视外框", descEn: "Precision extruded 6060-T66 alloy shrinks visible face width to 45mm while preserving full structural inertia.", descZh: "高精度 EN AW 6060-T66 航空级铝合金挤压成型，将可视面压缩至 45mm 仍保持高刚性抗风压。" },
-      { x: 50, y: 48, titleEn: "Aligned PA66 + Foam Core", titleZh: "等温线 PA66 + 发泡保温芯", descEn: "Continuous 34mm glass-fiber reinforced PA66 thermal break with integrated closed-cell foam blocks Perth 42°C solar conduction.", descZh: "34mm 玻纤增强 PA66 隔热条搭配闭孔聚氨酯保温芯，形成笔直等温隔热屏障。" },
-      { x: 48, y: 26, titleEn: "Triple EPDM Isobaric Seal", titleZh: "三道连续 EPDM 等压密封", descEn: "Three-stage perimeter weatherstripping delivers Class 4 airtightness and E1200 driving-rain protection.", descZh: "全周三道连续 EPDM 胶条形成独立等压气室，气密 4 级、水密 E1200Pa。" },
-      { x: 70, y: 66, titleEn: "Concealed Hinges (160kg)", titleZh: "全隐藏式德系重型铰链", descEn: "Zero visible barrel hinges on the interior face — clean minimalist shadow lines rated up to 160kg.", descZh: "室内侧完全隐形无外露合页，保持极简线条美感，单扇承重高达 160kg。" },
-      { x: 84, y: 44, titleEn: "Up to 52mm Low-E IGU", titleZh: "最高支持 52mm Low-E 中空玻璃", descEn: "Deep glazing pocket supports double or triple Low-E Argon-filled glazing with warm-edge spacers.", descZh: "宽大玻璃槽口支持双玻或三玻 Low-E 充氩气中空玻璃及暖边间隔条。" }
+      { x: 38, y: 42, titleEn: "45mm Concealed-Rebate Frame", titleZh: "45mm 极窄可视外框", descEn: "Precision extruded 6060-T66 alloy shrinks visible face width to 45mm while preserving full structural inertia.", descZh: "高精度 EN AW 6060-T66 航空级铝合金挤压成型，将可视面压缩至 45mm 仍保持高刚性抗风压。" },
+      { x: 61.5, y: 70, titleEn: "Aligned PA66 + Foam Core", titleZh: "等温线 PA66 + 发泡保温芯", descEn: "Continuous 34mm glass-fiber reinforced PA66 thermal break with integrated closed-cell foam blocks Perth 42°C solar conduction.", descZh: "34mm 玻纤增强 PA66 隔热条搭配闭孔聚氨酯保温芯，形成笔直等温隔热屏障。" },
+      { x: 48, y: 76.5, titleEn: "Triple EPDM Isobaric Seal", titleZh: "三道连续 EPDM 等压密封", descEn: "Three-stage perimeter weatherstripping delivers Class 4 airtightness and E1200 driving-rain protection.", descZh: "全周三道连续 EPDM 胶条形成独立等压气室，气密 4 级、水密 E1200Pa。" },
+      { x: 41, y: 58, titleEn: "Concealed Hinges (160kg)", titleZh: "全隐藏式德系重型铰链", descEn: "Zero visible barrel hinges on the interior face — clean minimalist shadow lines rated up to 160kg.", descZh: "室内侧完全隐形无外露合页，保持极简线条美感，单扇承重高达 160kg。" },
+      { x: 56, y: 34, titleEn: "Up to 52mm Low-E IGU", titleZh: "最高支持 52mm Low-E 中空玻璃", descEn: "Deep glazing pocket supports double or triple Low-E Argon-filled glazing with warm-edge spacers.", descZh: "宽大玻璃槽口支持双玻或三玻 Low-E 充氩气中空玻璃及暖边间隔条。" }
     ],
     bentoHero: {
       tagEn: "Minimalist Thermal Core", tagZh: "极窄高隔热核心",
@@ -343,11 +343,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Toggle the narrow 170mm ventilation sash between Sealed and Night-Purge Cooling modes to watch gentle cool Fremantle breeze enter while insects and intruders stay locked out.",
     demoDescZh: "切换「密闭隔热模式 / 夜间微通风模式」，观察凉爽海风穿过 170mm 极窄防虫通风扇形成的柔和室内对流。",
     hotspots: [
-      { x: 22, y: 45, titleEn: "170–250mm Slim Vent Sash", titleZh: "170–250mm 极窄实体通风扇", descEn: "Narrow architectural vertical flap opens inward cleanly while maintaining an unbroken exterior facade.", descZh: "极窄通高立面造型，向内平开即可换气，室外立面依然整齐统一。" },
-      { x: 42, y: 32, titleEn: "Integrated Perforated Insect & Fall Guard", titleZh: "内置防虫防坠落安全格栅", descEn: "Exterior perforated aluminium weather louvre + fine stainless mesh stops mosquitoes, rain spray, and child falls.", descZh: "室外一体化防雨穿孔格栅配细密不锈钢纱网，同步实现防蚊虫、防飘雨与高层防坠落。" },
-      { x: 52, y: 55, titleEn: "Insulated Foam-Core Panel", titleZh: "高密度发泡保温实体扇芯", descEn: "Thermal core inside the opaque vent leaf matches or exceeds triple-glazed insulation when closed.", descZh: "通风扇内部填充高密度隔热芯材，关闭后保温隔热性能媲美三玻墙体。" },
-      { x: 66, y: 38, titleEn: "Direct Coupling to Panoramic Glass", titleZh: "与超大固定落地玻璃无缝拼接", descEn: "Couples directly to Lambda WS 075 / WS 090 fixed frames for floor-to-ceiling glass walls up to 3m high.", descZh: "可直接与 75/90 系列大固定玻璃无缝拼框，轻松实现 3 米通高落地全景视野。" },
-      { x: 78, y: 66, titleEn: "Optional Motorized Smart Actuator", titleZh: "可选配电动智能定时开合", descEn: "Can be automated to open automatically when outdoor evening temperature drops below indoor temperature.", descZh: "支持接入智能家居，傍晚室外凉爽时自动开启换气，清晨自动关闭锁紧。" }
+      { x: 38, y: 42, titleEn: "170–250mm Slim Vent Sash", titleZh: "170–250mm 极窄实体通风扇", descEn: "Narrow architectural vertical flap opens inward cleanly while maintaining an unbroken exterior facade.", descZh: "极窄通高立面造型，向内平开即可换气，室外立面依然整齐统一。" },
+      { x: 43, y: 56, titleEn: "Integrated Perforated Insect & Fall Guard", titleZh: "内置防虫防坠落安全格栅", descEn: "Exterior perforated aluminium weather louvre + fine stainless mesh stops mosquitoes, rain spray, and child falls.", descZh: "室外一体化防雨穿孔格栅配细密不锈钢纱网，同步实现防蚊虫、防飘雨与高层防坠落。" },
+      { x: 61.5, y: 70, titleEn: "Insulated Foam-Core Panel", titleZh: "高密度发泡保温实体扇芯", descEn: "Thermal core inside the opaque vent leaf matches or exceeds triple-glazed insulation when closed.", descZh: "通风扇内部填充高密度隔热芯材，关闭后保温隔热性能媲美三玻墙体。" },
+      { x: 56, y: 34, titleEn: "Direct Coupling to Panoramic Glass", titleZh: "与超大固定落地玻璃无缝拼接", descEn: "Couples directly to Lambda WS 075 / WS 090 fixed frames for floor-to-ceiling glass walls up to 3m high.", descZh: "可直接与 75/90 系列大固定玻璃无缝拼框，轻松实现 3 米通高落地全景视野。" },
+      { x: 61.5, y: 83.5, titleEn: "Optional Motorized Smart Actuator", titleZh: "可选配电动智能定时开合", descEn: "Can be automated to open automatically when outdoor evening temperature drops below indoor temperature.", descZh: "支持接入智能家居，傍晚室外凉爽时自动开启换气，清晨自动关闭锁紧。" }
     ],
     bentoHero: {
       tagEn: "Architectural Night Cooling", tagZh: "建筑级夜间自然降温",
@@ -707,11 +707,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Click through each protective layer to inspect how architectural aluminium, intumescent fire seals, ballistic steel armor, and multi-laminated glazing work together.",
     demoDescZh: "点击逐层展开装甲防护结构，查看外层铝框、遇热膨胀防火层、特种防弹钢芯与多层防爆玻璃的协同防线。",
     hotspots: [
-      { x: 24, y: 36, titleEn: "Architectural Aluminium Outer Shell", titleZh: "建筑级铝合金外饰壳体", descEn: "Maintains identical slim architectural sightlines to adjoining standard windows for discreet security.", descZh: "保持与普通高端门窗一致的优雅外观，实现“隐形高安防”。" },
-      { x: 46, y: 46, titleEn: "Hardened Steel Ballistic Insert", titleZh: "内嵌特种防弹高强钢芯", descEn: "Certified to EN 1522 FB4 (handgun) and FB6 (rifle) ballistic resistance inside the profile cavity.", descZh: "型材主腔内置高强防弹钢芯，通过欧洲 EN 1522 FB4/FB6 防弹测试。" },
-      { x: 52, y: 26, titleEn: "Intumescent Fire-Expanding Seals", titleZh: "遇热膨胀阻燃防火密封条", descEn: "Expands up to 10x under intense heat to hermetically seal smoke and flame for 30–60 minutes (EI30/EI60).", descZh: "高温触发瞬间膨胀 10 倍，30–60 分钟内严密阻隔烈焰与有毒浓烟。" },
-      { x: 76, y: 44, titleEn: "Multi-Layer Fire / Ballistic Glass", titleZh: "多层复合防火防弹玻璃", descEn: "Accommodates intumescent gel fire glass or multi-laminated BR4/BR6 bullet-resistant glazing.", descZh: "支持灌浆/凝胶防火玻璃及 BR4/BR6 多层复合防弹玻璃。" },
-      { x: 64, y: 70, titleEn: "RC4 Heavy-Duty Security Locks", titleZh: "RC4 级重型防撬联动锁具", descEn: "Stainless steel deadbolts and drill-resistant lock cylinders withstand prolonged forced attack.", descZh: "不锈钢实心锁舌与防钻锁芯，抵御长时间暴力破坏。" }
+      { x: 38, y: 42, titleEn: "Architectural Aluminium Outer Shell", titleZh: "建筑级铝合金外饰壳体", descEn: "Maintains identical slim architectural sightlines to adjoining standard windows for discreet security.", descZh: "保持与普通高端门窗一致的优雅外观，实现“隐形高安防”。" },
+      { x: 61.5, y: 70, titleEn: "Hardened Steel Ballistic Insert", titleZh: "内嵌特种防弹高强钢芯", descEn: "Certified to EN 1522 FB4 (handgun) and FB6 (rifle) ballistic resistance inside the profile cavity.", descZh: "型材主腔内置高强防弹钢芯，通过欧洲 EN 1522 FB4/FB6 防弹测试。" },
+      { x: 48, y: 76.5, titleEn: "Intumescent Fire-Expanding Seals", titleZh: "遇热膨胀阻燃防火密封条", descEn: "Expands up to 10x under intense heat to hermetically seal smoke and flame for 30–60 minutes (EI30/EI60).", descZh: "高温触发瞬间膨胀 10 倍，30–60 分钟内严密阻隔烈焰与有毒浓烟。" },
+      { x: 56, y: 34, titleEn: "Multi-Layer Fire / Ballistic Glass", titleZh: "多层复合防火防弹玻璃", descEn: "Accommodates intumescent gel fire glass or multi-laminated BR4/BR6 bullet-resistant glazing.", descZh: "支持灌浆/凝胶防火玻璃及 BR4/BR6 多层复合防弹玻璃。" },
+      { x: 41, y: 58, titleEn: "RC4 Heavy-Duty Security Locks", titleZh: "RC4 级重型防撬联动锁具", descEn: "Stainless steel deadbolts and drill-resistant lock cylinders withstand prolonged forced attack.", descZh: "不锈钢实心锁舌与防钻锁芯，抵御长时间暴力破坏。" }
     ],
     bentoHero: {
       tagEn: "Certified Life & Estate Protection", tagZh: "权威认证生命与财产防线",
@@ -889,11 +889,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Trigger 'Daily Comfort Vent' or 'Fire Alarm Smoke Purge' to watch the concealed chain actuator deploy and extract rising smoke/heat plumes automatically.",
     demoDescZh: "点击触发「日常舒适微通风」或「火警 60s 极速排烟」，实时观看隐藏链式驱动器伸展与高温浓烟迅速抽排过程。",
     hotspots: [
-      { x: 48, y: 26, titleEn: "Concealed 24V Chain Actuator", titleZh: "隐藏式 24V 电动链式驱动器", descEn: "Tucked cleanly inside the thermally broken frame with 10,000+ daily ventilation cycles and fail-safe emergency deployment.", descZh: "隐蔽嵌入断桥铝型材腔体内，支持 10,000 次以上日常通风循环及火警强启。" },
-      { x: 74, y: 34, titleEn: "High-Flow Smoke Exhaust Angle", titleZh: "大角度高效排烟开口", descEn: "Opens rapidly up to 60°–90° within 60 seconds to maximize aerodynamic free area (Aa) for smoke clearance.", descZh: "60 秒内极速开启至大角度，最大化有效排烟面积（Aa），快速清空有毒烟气。" },
-      { x: 50, y: 52, titleEn: "Thermally Broken 75/90mm Frame", titleZh: "75/90mm 断桥隔热基座", descEn: "Full PA66 thermal break ensures zero heat-loss penalty during normal daily building operation.", descZh: "保留完整 PA66 断桥隔热结构，日常节能表现与常规高端窗完全一致。" },
-      { x: 26, y: 64, titleEn: "BMS & Fire-Panel Integration", titleZh: "无缝对接消防主机与 BMS", descEn: "24V DC battery-backed control panel links directly to building smoke detectors, wind/rain sensors, and manual break-glass points.", descZh: "24V 备电控制箱直连烟感探测器、风雨感应器及手动消防破玻按钮。" },
-      { x: 66, y: 68, titleEn: "300°C Heat-Resistant Reliability", titleZh: "300°C 高温耐热运行认证", descEn: "Certified B300 thermal exposure class guarantees actuator operation even under intense fire heat.", descZh: "通过 B300 高温测试，确保火灾高温环境下机械与电机依然可靠动作。" }
+      { x: 41, y: 56, titleEn: "Concealed 24V Chain Actuator", titleZh: "隐藏式 24V 电动链式驱动器", descEn: "Tucked cleanly inside the thermally broken frame with 10,000+ daily ventilation cycles and fail-safe emergency deployment.", descZh: "隐蔽嵌入断桥铝型材腔体内，支持 10,000 次以上日常通风循环及火警强启。" },
+      { x: 56, y: 34, titleEn: "High-Flow Smoke Exhaust Angle", titleZh: "大角度高效排烟开口", descEn: "Opens rapidly up to 60°–90° within 60 seconds to maximize aerodynamic free area (Aa) for smoke clearance.", descZh: "60 秒内极速开启至大角度，最大化有效排烟面积（Aa），快速清空有毒烟气。" },
+      { x: 61.5, y: 70, titleEn: "Thermally Broken 75/90mm Frame", titleZh: "75/90mm 断桥隔热基座", descEn: "Full PA66 thermal break ensures zero heat-loss penalty during normal daily building operation.", descZh: "保留完整 PA66 断桥隔热结构，日常节能表现与常规高端窗完全一致。" },
+      { x: 48, y: 76.5, titleEn: "BMS & Fire-Panel Integration", titleZh: "无缝对接消防主机与 BMS", descEn: "24V DC battery-backed control panel links directly to building smoke detectors, wind/rain sensors, and manual break-glass points.", descZh: "24V 备电控制箱直连烟感探测器、风雨感应器及手动消防破玻按钮。" },
+      { x: 61.5, y: 83.5, titleEn: "300°C Heat-Resistant Reliability", titleZh: "300°C 高温耐热运行认证", descEn: "Certified B300 thermal exposure class guarantees actuator operation even under intense fire heat.", descZh: "通过 B300 高温测试，确保火灾高温环境下机械与电机依然可靠动作。" }
     ],
     bentoHero: {
       tagEn: "Certified Smoke & Heat Exhaust", tagZh: "欧洲权威认证排烟排热",
@@ -1071,11 +1071,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Click any live scenario below — Rain Storm Detected, Biometric Entry, Night Cooling, or Away Lock — to see how GEN 4.0 hardware responds in real time.",
     demoDescZh: "点击下方任意场景按钮（突发降雨 / 指纹回家 / 夜间换气 / 离家全屋布防），实时观看 GEN 4.0 智能门窗的联动响应。",
     hotspots: [
-      { x: 48, y: 28, titleEn: "Concealed Brushless 24V Drive", titleZh: "全隐藏 24V 无刷静音驱动", descEn: "Whisper-quiet <32 dB motorized opening and locking completely hidden inside the frame rebate.", descZh: "低于 32 分贝超静音无刷电机，完全隐蔽内置于型材槽口，外观零外露。" },
-      { x: 26, y: 44, titleEn: "Integrated Biometric & NFC Access", titleZh: "嵌入式指纹与 NFC 门禁", descEn: "Flush-mounted stainless fingerprint scanner & keypad inside the door leaf or pull handle.", descZh: "极简嵌入式不锈钢指纹与密码模块，无缝融入门扇或拉手，一触秒开。" },
-      { x: 74, y: 30, titleEn: "Rain, Wind & CO2 Environmental Sensors", titleZh: "风雨与空气质量智能传感器", descEn: "Detects the first drops of rain or high Fremantle wind gusts and automatically closes & locks windows.", descZh: "感知第一滴雨或强风阵风瞬间自动关窗上锁；室内 CO2 偏高时自动微开换气。" },
-      { x: 56, y: 66, titleEn: "Anti-Pinch Safety & Magnetic Status", titleZh: "防夹手保护与门窗磁状态监测", descEn: "Real-time open/closed/locked telemetry in your smartphone app with instant anti-pinch obstacle stop.", descZh: "手机 App 实时查看全屋每扇门窗开关及上锁状态，遇阻即停保护儿童安全。" },
-      { x: 34, y: 68, titleEn: "KNX / Matter / Apple Home Ready", titleZh: "兼容 KNX / Matter / Apple Home", descEn: "Open smart-home protocol bridge integrates seamlessly with Control4, KNX, HomeKit, and Google Home.", descZh: "支持主流智能协议，无缝对接 Control4、KNX、Apple HomeKit 及米家/Google Home。" }
+      { x: 41, y: 56, titleEn: "Concealed Brushless 24V Drive", titleZh: "全隐藏 24V 无刷静音驱动", descEn: "Whisper-quiet <32 dB motorized opening and locking completely hidden inside the frame rebate.", descZh: "低于 32 分贝超静音无刷电机，完全隐蔽内置于型材槽口，外观零外露。" },
+      { x: 38, y: 40, titleEn: "Integrated Biometric & NFC Access", titleZh: "嵌入式指纹与 NFC 门禁", descEn: "Flush-mounted stainless fingerprint scanner & keypad inside the door leaf or pull handle.", descZh: "极简嵌入式不锈钢指纹与密码模块，无缝融入门扇或拉手，一触秒开。" },
+      { x: 56, y: 34, titleEn: "Rain, Wind & CO2 Environmental Sensors", titleZh: "风雨与空气质量智能传感器", descEn: "Detects the first drops of rain or high Fremantle wind gusts and automatically closes & locks windows.", descZh: "感知第一滴雨或强风阵风瞬间自动关窗上锁；室内 CO2 偏高时自动微开换气。" },
+      { x: 48, y: 76.5, titleEn: "Anti-Pinch Safety & Magnetic Status", titleZh: "防夹手保护与门窗磁状态监测", descEn: "Real-time open/closed/locked telemetry in your smartphone app with instant anti-pinch obstacle stop.", descZh: "手机 App 实时查看全屋每扇门窗开关及上锁状态，遇阻即停保护儿童安全。" },
+      { x: 61.5, y: 70, titleEn: "KNX / Matter / Apple Home Ready", titleZh: "兼容 KNX / Matter / Apple Home", descEn: "Open smart-home protocol bridge integrates seamlessly with Control4, KNX, HomeKit, and Google Home.", descZh: "支持主流智能协议，无缝对接 Control4、KNX、Apple HomeKit 及米家/Google Home。" }
     ],
     bentoHero: {
       tagEn: "4th Gen Intelligent Hardware", tagZh: "第四代全屋智能门窗引擎",
