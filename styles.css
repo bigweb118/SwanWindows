@@ -1352,10 +1352,19 @@ textarea::placeholder {
   box-shadow: 0 0 0 10px rgba(182, 134, 75, 0.45);
 }
 
-.pin-1 { top: 38%; left: 48%; }
-.pin-2 { top: 18%; left: 52%; }
-.pin-3 { top: 62%; left: 46%; }
-.pin-4 { top: 78%; left: 50%; }
+.profile-visual-wrapper .hotspot-pin {
+  transform: translate(-50%, -50%);
+}
+
+.profile-visual-wrapper .hotspot-pin:hover,
+.profile-visual-wrapper .hotspot-pin.is-active {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+.pin-1 { top: 83.5%; left: 67.5%; }
+.pin-2 { top: 34%; left: 56%; }
+.pin-3 { top: 70%; left: 55%; }
+.pin-4 { top: 52%; left: 38.5%; }
 
 /* Spec Badges Grid */
 .spec-metrics-bar {
