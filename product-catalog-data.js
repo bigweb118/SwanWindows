@@ -161,11 +161,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Toggle between Closed Storm Seal, Rain-Safe Awning Vent (25°), and Full Casement Breeze (90°) to observe wind/rain deflection and triple-gasket compression.",
     demoDescZh: "点击切换「风暴锁闭 / 微开防雨悬窗 (25°) / 全开通风 (90°)」，直观演示外开扇挡雨导流与风压自紧密封原理。",
     hotspots: [
-      { x: 78, y: 28, titleEn: "45° Rain-Shedding Exterior Bevel", titleZh: "45° 室外斜切导水倒角", descEn: "Sloped exterior sash shoulder channels heavy coastal rain away from glazing seals immediately.", descZh: "窗扇室外侧 45° 斜角设计迅速导流雨水，避免窗台积水渗透。" },
-      { x: 50, y: 46, titleEn: "Wind-Activated Triple EPDM Seal", titleZh: "风压自紧三道 EPDM 密封", descEn: "Positive coastal wind load compresses the outward sash tighter onto the central and interior EPDM gaskets.", descZh: "沿海正风压越大，外开扇越紧密压合在三道等压胶条上，水密高达 E1200Pa。" },
-      { x: 50, y: 66, titleEn: "Aligned PA66 + Thermal Foam", titleZh: "垂直对齐 PA66 发泡隔热芯", descEn: "Continuous thermal break with closed-cell foam insulation maintains Uf down to 0.95 W/m²K.", descZh: "框扇隔热条位于同一等温面并填充发泡芯，框体 Uf 低至 0.95 W/m²K。" },
-      { x: 26, y: 34, titleEn: "Interior Clip-In Security Bead", titleZh: "室内侧卡扣防盗玻璃压线", descEn: "Glass is glazed from the interior — impossible to pry out from outside, and effortless to service indoors.", descZh: "压线位于室内侧，彻底杜绝室外撬拆玻璃风险，同时支持室内安全更换玻璃。" },
-      { x: 24, y: 70, titleEn: "Flush Interior + WA Wall Fin Ready", titleZh: "室内齐平 + 西澳双砖/木框收口适配", descEn: "Available with flat double-brick frame or integrated aluminium fin + timber reveal for any WA wall build.", descZh: "室内框扇齐平美观，支持珀斯双砖平框或带安装翼缘+木套多种西澳墙体收口。" }
+      { x: 63.5, y: 56, titleEn: "45° Rain-Shedding Exterior Bevel", titleZh: "45° 室外斜切导水倒角", descEn: "Sloped exterior sash shoulder channels heavy coastal rain away from glazing seals immediately.", descZh: "窗扇室外侧 45° 斜角设计迅速导流雨水，避免窗台积水渗透。" },
+      { x: 54, y: 70, titleEn: "Wind-Activated Triple EPDM Seal", titleZh: "风压自紧三道 EPDM 密封", descEn: "Positive coastal wind load compresses the outward sash tighter onto the central and interior EPDM gaskets.", descZh: "沿海正风压越大，外开扇越紧密压合在三道等压胶条上，水密高达 E1200Pa。" },
+      { x: 67.5, y: 83.5, titleEn: "Aligned PA66 + Thermal Foam", titleZh: "垂直对齐 PA66 发泡隔热芯", descEn: "Continuous thermal break with closed-cell foam insulation maintains Uf down to 0.95 W/m²K.", descZh: "框扇隔热条位于同一等温面并填充发泡芯，框体 Uf 低至 0.95 W/m²K。" },
+      { x: 56, y: 34, titleEn: "Interior Clip-In Security Bead", titleZh: "室内侧卡扣防盗玻璃压线", descEn: "Glass is glazed from the interior — impossible to pry out from outside, and effortless to service indoors.", descZh: "压线位于室内侧，彻底杜绝室外撬拆玻璃风险，同时支持室内安全更换玻璃。" },
+      { x: 38.5, y: 52, titleEn: "Flush Interior + WA Wall Fin Ready", titleZh: "室内齐平 + 西澳双砖/木框收口适配", descEn: "Available with flat double-brick frame or integrated aluminium fin + timber reveal for any WA wall build.", descZh: "室内框扇齐平美观，支持珀斯双砖平框或带安装翼缘+木套多种西澳墙体收口。" }
     ],
     bentoHero: {
       tagEn: "Coastal Weatherproof Flagship", tagZh: "西澳沿海防风防雨旗舰",
@@ -252,11 +252,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Drag or toggle the X-Ray scanner to peel back the classic heritage contours and reveal the hidden PA66 thermal break and multi-point steel locking core.",
     demoDescZh: "拖动或点击 X 光透视滑块，剥离古典线脚外观，直击内部隐藏的 PA66 断桥隔热腔与多点钢制防盗锁具。",
     hotspots: [
-      { x: 24, y: 30, titleEn: "CD Stepped / RD Rounded Moulding", titleZh: "CD 阶梯 / RD 圆弧古典线脚", descEn: "Authentic bevelled or softly rounded exterior contours matching heritage timber and steel-frame aesthetics.", descZh: "精致倒角与柔美圆弧外框轮廓，高度还原传统木窗与法式钢窗质感。" },
-      { x: 50, y: 48, titleEn: "Hidden 75mm PA66 Thermal Core", titleZh: "隐藏式 75mm PA66 隔热核心", descEn: "Full-depth polyamide barrier slashes heat gain by over 75% compared to original single-glazed heritage frames.", descZh: "全深度尼龙断桥结构，相较原装单玻老窗减少 75% 以上热传导。" },
-      { x: 48, y: 26, titleEn: "Draft-Free Triple EPDM Seal", titleZh: "零穿堂风三道 EPDM 密封", descEn: "Eliminates winter drafts and rattling sashes common in older timber renovations.", descZh: "彻底解决传统老式木窗冬季漏风与风吹异响问题。" },
-      { x: 74, y: 38, titleEn: "Optional Colonial Glazing Bars", titleZh: "可选配法式复古装饰格条", descEn: "Applied or internal Georgian/colonial muntin bars available without breaking the insulated glass seal.", descZh: "支持表面贴装或中空内置复古格条，不破坏中空玻璃密封性能。" },
-      { x: 68, y: 68, titleEn: "Heritage Brass / Bronze Handles", titleZh: "古铜/哑黑经典执手五金", descEn: "Period-inspired architectural handles paired with modern concealed RC3 multi-point gearboxes.", descZh: "复古建筑级执手搭配现代隐藏式 RC3 多点联动防盗锁盒。" }
+      { x: 38.5, y: 42, titleEn: "CD Stepped / RD Rounded Moulding", titleZh: "CD 阶梯 / RD 圆弧古典线脚", descEn: "Authentic bevelled or softly rounded exterior contours matching heritage timber and steel-frame aesthetics.", descZh: "精致倒角与柔美圆弧外框轮廓，高度还原传统木窗与法式钢窗质感。" },
+      { x: 67.5, y: 66, titleEn: "Hidden 75mm PA66 Thermal Core", titleZh: "隐藏式 75mm PA66 隔热核心", descEn: "Full-depth polyamide barrier slashes heat gain by over 75% compared to original single-glazed heritage frames.", descZh: "全深度尼龙断桥结构，相较原装单玻老窗减少 75% 以上热传导。" },
+      { x: 54, y: 70, titleEn: "Draft-Free Triple EPDM Seal", titleZh: "零穿堂风三道 EPDM 密封", descEn: "Eliminates winter drafts and rattling sashes common in older timber renovations.", descZh: "彻底解决传统老式木窗冬季漏风与风吹异响问题。" },
+      { x: 56, y: 34, titleEn: "Optional Colonial Glazing Bars", titleZh: "可选配法式复古装饰格条", descEn: "Applied or internal Georgian/colonial muntin bars available without breaking the insulated glass seal.", descZh: "支持表面贴装或中空内置复古格条，不破坏中空玻璃密封性能。" },
+      { x: 38.5, y: 62, titleEn: "Heritage Brass / Bronze Handles", titleZh: "古铜/哑黑经典执手五金", descEn: "Period-inspired architectural handles paired with modern concealed RC3 multi-point gearboxes.", descZh: "复古建筑级执手搭配现代隐藏式 RC3 多点联动防盗锁盒。" }
     ],
     bentoHero: {
       tagEn: "Character Renovation Benchmark", tagZh: "经典豪宅翻新标杆",
@@ -434,11 +434,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Switch between Perth 44°C Peak Summer and 4°C Winter Night to observe how three Low-E panes and the 90mm foam-filled break neutralize extreme outdoor temperatures.",
     demoDescZh: "切换「珀斯 44°C 酷暑骄阳 / 4°C 寒冬深夜」，实时演示三玻 Low-E 腔体与 90mm 发泡断桥如何稳稳锁住室内 22°C 恒温。",
     hotspots: [
-      { x: 52, y: 44, titleEn: "44mm Extended PA66 Thermal Break", titleZh: "44mm 加宽玻纤增强 PA66 断桥", descEn: "Extra-wide thermal zone dramatically lengthens the heat conduction path for Passive House Uf = 0.70 W/m²K.", descZh: "超宽 44mm 隔热区大幅拉长热传导路径，成就 Uf = 0.70 W/m²K 被动房级水准。" },
-      { x: 52, y: 66, titleEn: "Dual High-Density Thermal Foam Cores", titleZh: "双腔体高密度聚氨酯保温芯", descEn: "Precision-fitted insulating foam inserts suppress internal cavity air convection and radiation.", descZh: "框扇双腔精准嵌入保温发泡芯，彻底抑制型材内部空气热对流。" },
-      { x: 64, y: 24, titleEn: "78mm Triple-Glazing Capacity", titleZh: "最高 78mm 超厚三玻槽口", descEn: "Holds massive triple-pane Low-E Argon IGUs (Uw down to 0.72 W/m²K) with dual warm-edge spacers.", descZh: "支持厚达 78mm 三层中空 Low-E 充氩气玻璃与双暖边间隔条，整窗 Uw 低至 0.72。" },
-      { x: 56, y: 55, titleEn: "Multi-Fin Central Isobaric Gasket", titleZh: "多翼片等压中缝密封胶条", descEn: "Divides the frame-sash rebate into dry warm and wet cold chambers for total condensation prevention.", descZh: "将框扇缝隙分隔为冷湿腔与干暖腔，杜绝室内结露与冷凝水。" },
-      { x: 30, y: 74, titleEn: "Heavy-Duty 200kg Concealed Hardware", titleZh: "200kg 超重型隐藏式德系五金", descEn: "Engineered to carry the weight of thick triple-glazed architectural sashes smoothly for decades.", descZh: "专为厚重三玻大窗扇打造的 200kg 重型隐藏铰链，开合顺滑数十年如一日。" }
+      { x: 69.5, y: 65.5, titleEn: "44mm Extended PA66 Thermal Break", titleZh: "44mm 加宽玻纤增强 PA66 断桥", descEn: "Extra-wide thermal zone dramatically lengthens the heat conduction path for Passive House Uf = 0.70 W/m²K.", descZh: "超宽 44mm 隔热区大幅拉长热传导路径，成就 Uf = 0.70 W/m²K 被动房级水准。" },
+      { x: 69.5, y: 83.5, titleEn: "Dual High-Density Thermal Foam Cores", titleZh: "双腔体高密度聚氨酯保温芯", descEn: "Precision-fitted insulating foam inserts suppress internal cavity air convection and radiation.", descZh: "框扇双腔精准嵌入保温发泡芯，彻底抑制型材内部空气热对流。" },
+      { x: 58, y: 34, titleEn: "78mm Triple-Glazing Capacity", titleZh: "最高 78mm 超厚三玻槽口", descEn: "Holds massive triple-pane Low-E Argon IGUs (Uw down to 0.72 W/m²K) with dual warm-edge spacers.", descZh: "支持厚达 78mm 三层中空 Low-E 充氩气玻璃与双暖边间隔条，整窗 Uw 低至 0.72。" },
+      { x: 55, y: 71, titleEn: "Multi-Fin Central Isobaric Gasket", titleZh: "多翼片等压中缝密封胶条", descEn: "Divides the frame-sash rebate into dry warm and wet cold chambers for total condensation prevention.", descZh: "将框扇缝隙分隔为冷湿腔与干暖腔，杜绝室内结露与冷凝水。" },
+      { x: 39, y: 54, titleEn: "Heavy-Duty 200kg Concealed Hardware", titleZh: "200kg 超重型隐藏式德系五金", descEn: "Engineered to carry the weight of thick triple-glazed architectural sashes smoothly for decades.", descZh: "专为厚重三玻大窗扇打造的 200kg 重型隐藏铰链，开合顺滑数十年如一日。" }
     ],
     bentoHero: {
       tagEn: "Passivhaus Flagship", tagZh: "德国被动房级旗舰",
@@ -525,11 +525,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Toggle between a bulky conventional Passive House frame and the slim Lambda WS 090 IS to compare daylight ratio and architectural cleanliness.",
     demoDescZh: "一键对比传统厚重被动房窗框与 Lambda WS 090 IS 极窄被动房窗框的采光占比与极简视效。",
     hotspots: [
-      { x: 26, y: 36, titleEn: "Minimalist Slim Outer Rebate", titleZh: "极窄隐藏式外框搭接", descEn: "Slender architectural face width maximizes glass-to-frame ratio for contemporary luxury homes.", descZh: "极简窄框面宽最大化玻璃占比，成就当代极简豪宅立面。" },
-      { x: 52, y: 48, titleEn: "90mm Deep Foam-Filled Break", titleZh: "90mm 超深发泡隔热断桥", descEn: "Deep PA66 thermal break with integrated foam cores reaches Uf = 0.75 W/m²K despite slim sightlines.", descZh: "在极窄外观下依然保有 90mm 超深 PA66 发泡断桥，框体 Uf 低至 0.75。" },
-      { x: 64, y: 24, titleEn: "Triple Low-E Glass Pocket", titleZh: "三玻 Low-E 超厚玻璃槽", descEn: "Supports up to 68mm triple insulated glazing with dual warm-edge spacers.", descZh: "可容纳厚达 68mm 三层中空玻璃与双暖边条，极致隔热。" },
-      { x: 54, y: 66, titleEn: "3-Stage Isobaric EPDM Sealing", titleZh: "三道等压 EPDM 连续密封", descEn: "Continuous acoustic and weather gaskets seal tight against coastal storms.", descZh: "全周连续密封胶条抵御西澳海岸暴风雨与强风压。" },
-      { x: 78, y: 60, titleEn: "Concealed High-Load Hinges", titleZh: "隐藏式高承重德系五金", descEn: "Zero exterior or interior visible hinges preserve uninterrupted minimalist lines.", descZh: "全隐藏重型五金，内外均无多余突兀构件。" }
+      { x: 39, y: 40, titleEn: "Minimalist Slim Outer Rebate", titleZh: "极窄隐藏式外框搭接", descEn: "Slender architectural face width maximizes glass-to-frame ratio for contemporary luxury homes.", descZh: "极简窄框面宽最大化玻璃占比，成就当代极简豪宅立面。" },
+      { x: 69.5, y: 65.5, titleEn: "90mm Deep Foam-Filled Break", titleZh: "90mm 超深发泡隔热断桥", descEn: "Deep PA66 thermal break with integrated foam cores reaches Uf = 0.75 W/m²K despite slim sightlines.", descZh: "在极窄外观下依然保有 90mm 超深 PA66 发泡断桥，框体 Uf 低至 0.75。" },
+      { x: 58, y: 34, titleEn: "Triple Low-E Glass Pocket", titleZh: "三玻 Low-E 超厚玻璃槽", descEn: "Supports up to 68mm triple insulated glazing with dual warm-edge spacers.", descZh: "可容纳厚达 68mm 三层中空玻璃与双暖边条，极致隔热。" },
+      { x: 55, y: 71, titleEn: "3-Stage Isobaric EPDM Sealing", titleZh: "三道等压 EPDM 连续密封", descEn: "Continuous acoustic and weather gaskets seal tight against coastal storms.", descZh: "全周连续密封胶条抵御西澳海岸暴风雨与强风压。" },
+      { x: 39, y: 60, titleEn: "Concealed High-Load Hinges", titleZh: "隐藏式高承重德系五金", descEn: "Zero exterior or interior visible hinges preserve uninterrupted minimalist lines.", descZh: "全隐藏重型五金，内外均无多余突兀构件。" }
     ],
     bentoHero: {
       tagEn: "Minimalist Passive House", tagZh: "极简被动房标杆",
@@ -616,11 +616,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Switch outdoor noise scenarios (Freeway Traffic 85 dB / Airport Flight Path 90 dB / Coastal Gale 78 dB) to watch live soundwave amplitude collapse through the SilentAir baffle.",
     demoDescZh: "切换不同外界噪音场景（高速车流 85 dB / 航线飞机 90 dB / 沿海强风 78 dB），实时观看声波经过 SilentAir 迷宫后被大幅削平的过程。",
     hotspots: [
-      { x: 68, y: 34, titleEn: "Acoustic Labyrinth Baffle Cassette", titleZh: "专利多折角声学消音迷宫", descEn: "Engineered serpentine air channel lined with high-absorption acoustic foam cancels mid-to-low frequency traffic roar.", descZh: "蛇形折角风道内衬高密度吸音棉，精准吸收低频引擎轰鸣与中高频胎噪。" },
-      { x: 52, y: 38, titleEn: "Asymmetric Acoustic Laminated Triple IGU", titleZh: "非对称声学夹胶三玻配置", descEn: "Different glass pane thicknesses + PVB acoustic interlayer prevent resonant frequency transmission.", descZh: "采用非对称玻璃厚度组合配 PVB 声学夹胶膜，彻底消除玻璃共振传声。" },
-      { x: 60, y: 68, titleEn: "90mm High-Mass Thermal Frame", titleZh: "90mm 高质量阻尼断桥框", descEn: "Deep 90mm aluminium chambers with foam cores add acoustic mass and Passive House insulation (Uf 0.78).", descZh: "90mm 加深型材与保温发泡芯提升面密度隔声量，同时保持 0.78 超低传热。" },
-      { x: 58, y: 54, titleEn: "Acoustic Decoupled Triple EPDM", titleZh: "声学解耦三道 EPDM 密封", descEn: "Soft compression gaskets eliminate micro air gaps where high-frequency noise normally leaks.", descZh: "柔性三道连续压合胶条封死一切微小缝隙，杜绝高频漏音。" },
-      { x: 74, y: 58, titleEn: "Cleanable Filter & Draft Control", titleZh: "可拆洗防尘滤网与风量阀", descEn: "Built-in pollen/dust mesh and adjustable interior flow damper keep air clean and draft-free.", descZh: "内置可清洁防尘防花粉滤网与风量调节阀，送风洁净且无冷风直吹。" }
+      { x: 67, y: 34, titleEn: "Acoustic Labyrinth Baffle Cassette", titleZh: "专利多折角声学消音迷宫", descEn: "Engineered serpentine air channel lined with high-absorption acoustic foam cancels mid-to-low frequency traffic roar.", descZh: "蛇形折角风道内衬高密度吸音棉，精准吸收低频引擎轰鸣与中高频胎噪。" },
+      { x: 54, y: 38, titleEn: "Asymmetric Acoustic Laminated Triple IGU", titleZh: "非对称声学夹胶三玻配置", descEn: "Different glass pane thicknesses + PVB acoustic interlayer prevent resonant frequency transmission.", descZh: "采用非对称玻璃厚度组合配 PVB 声学夹胶膜，彻底消除玻璃共振传声。" },
+      { x: 61.5, y: 84, titleEn: "90mm High-Mass Thermal Frame", titleZh: "90mm 高质量阻尼断桥框", descEn: "Deep 90mm aluminium chambers with foam cores add acoustic mass and Passive House insulation (Uf 0.78).", descZh: "90mm 加深型材与保温发泡芯提升面密度隔声量，同时保持 0.78 超低传热。" },
+      { x: 48, y: 73, titleEn: "Acoustic Decoupled Triple EPDM", titleZh: "声学解耦三道 EPDM 密封", descEn: "Soft compression gaskets eliminate micro air gaps where high-frequency noise normally leaks.", descZh: "柔性三道连续压合胶条封死一切微小缝隙，杜绝高频漏音。" },
+      { x: 67, y: 56, titleEn: "Cleanable Filter & Draft Control", titleZh: "可拆洗防尘滤网与风量阀", descEn: "Built-in pollen/dust mesh and adjustable interior flow damper keep air clean and draft-free.", descZh: "内置可清洁防尘防花粉滤网与风量调节阀，送风洁净且无冷风直吹。" }
     ],
     bentoHero: {
       tagEn: "Ultimate Acoustic Engineering", tagZh: "顶级声学静音工程",
@@ -798,11 +798,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Slide the wind pressure from Calm Breeze (500 Pa) to Category-5 Cyclone (5000 Pa) to compare frame rigidity between standard 60mm profiles and Lambda 100.",
     demoDescZh: "拖动风压滑块（从 500 Pa 微风到 5000 Pa 强台风），直观对比普通 60mm 铝型材与 Lambda 100 重型结构的抗弯曲挠度差异。",
     hotspots: [
-      { x: 30, y: 36, titleEn: "100mm High-Inertia Box Section", titleZh: "100mm 超高惯性矩承重腔", descEn: "Deep multi-chamber 6063-T6 structural webs deliver extreme bending resistance across 3.6m spans.", descZh: "加厚多腔体受力截面提供超高抗弯惯性矩，3.6 米通高依然挺拔如初。" },
-      { x: 52, y: 50, titleEn: "Heavy-Duty Reinforced Thermal Break", titleZh: "高剪切强度增强型断桥条", descEn: "High-shear PA66 GF25 thermal struts transfer 400kg glass loads safely without creep or sagging.", descZh: "高抗剪玻纤 PA66 隔热条稳定传递 400kg 玻璃荷载，长年使用不下垂。" },
-      { x: 64, y: 24, titleEn: "Massive Triple & Jumbo Glass Rebate", titleZh: "巨幅三玻与超厚夹胶槽口", descEn: "Accepts oversized safety, acoustic, and solar-control insulated glass panels up to 72mm thick.", descZh: "支持超大板块钢化夹胶中空玻璃，最大厚度高达 72mm。" },
-      { x: 54, y: 68, titleEn: "400kg Precision Stainless Gear", titleZh: "400kg 级重型不锈钢承重五金", descEn: "Tandem stainless load carriages and reinforced corner cleats keep giant sashes gliding smoothly.", descZh: "串联重型不锈钢承重滑轮/铰链与注胶强化角码，巨扇启闭依然顺滑。" },
-      { x: 76, y: 62, titleEn: "Integrated Curtain-Wall Coupling", titleZh: "无缝对接玻璃幕墙系统", descEn: "Direct modular integration into mullion-transom glass facades for seamless commercial/villa elevations.", descZh: "可无缝嵌入明框/隐框玻璃幕墙体系，实现整面建筑立面视觉统一。" }
+      { x: 39, y: 42, titleEn: "100mm High-Inertia Box Section", titleZh: "100mm 超高惯性矩承重腔", descEn: "Deep multi-chamber 6063-T6 structural webs deliver extreme bending resistance across 3.6m spans.", descZh: "加厚多腔体受力截面提供超高抗弯惯性矩，3.6 米通高依然挺拔如初。" },
+      { x: 69.5, y: 65.5, titleEn: "Heavy-Duty Reinforced Thermal Break", titleZh: "高剪切强度增强型断桥条", descEn: "High-shear PA66 GF25 thermal struts transfer 400kg glass loads safely without creep or sagging.", descZh: "高抗剪玻纤 PA66 隔热条稳定传递 400kg 玻璃荷载，长年使用不下垂。" },
+      { x: 58, y: 34, titleEn: "Massive Triple & Jumbo Glass Rebate", titleZh: "巨幅三玻与超厚夹胶槽口", descEn: "Accepts oversized safety, acoustic, and solar-control insulated glass panels up to 72mm thick.", descZh: "支持超大板块钢化夹胶中空玻璃，最大厚度高达 72mm。" },
+      { x: 55, y: 71, titleEn: "400kg Precision Stainless Gear", titleZh: "400kg 级重型不锈钢承重五金", descEn: "Tandem stainless load carriages and reinforced corner cleats keep giant sashes gliding smoothly.", descZh: "串联重型不锈钢承重滑轮/铰链与注胶强化角码，巨扇启闭依然顺滑。" },
+      { x: 69.5, y: 83.5, titleEn: "Integrated Curtain-Wall Coupling", titleZh: "无缝对接玻璃幕墙系统", descEn: "Direct modular integration into mullion-transom glass facades for seamless commercial/villa elevations.", descZh: "可无缝嵌入明框/隐框玻璃幕墙体系，实现整面建筑立面视觉统一。" }
     ],
     bentoHero: {
       tagEn: "High-Load Architectural Flagship", tagZh: "超高承重立面旗舰",
@@ -980,11 +980,11 @@ window.SWAN_PRODUCTS = {
     demoDescEn: "Toggle between Unlocked Glide and Multi-Point Hook Locked to watch the upper, middle, and lower hardened stainless steel hooks engage simultaneously into the frame.",
     demoDescZh: "点击切换「顺滑解锁开启 / 多点钩锁闭锁」，直观观看上、中、下三组加厚不锈钢钩舌同步咬合锁紧门框的防撬瞬间。",
     hotspots: [
-      { x: 26, y: 74, titleEn: "Zero-Barrier Flush Threshold", titleZh: "零阶梯无障碍平门槛", descEn: "Thermally broken low-profile sill with integrated hidden drainage channel eliminates trip hazards.", descZh: "断桥隔热极低平门槛内藏隐蔽排水槽，彻底消除绊脚隐患，婴儿车与轮椅畅通无阻。" },
-      { x: 64, y: 46, titleEn: "3-Point Stainless Hook Locking", titleZh: "三点不锈钢钩状防盗锁", descEn: "Hardened steel hook bolts lock upward and downward into reinforced strike plates for RC3 security.", descZh: "加厚不锈钢钩舌多点深入门框锁座咬合，强力防撬防拉拔，达 RC3 安防标准。" },
-      { x: 50, y: 34, titleEn: "72mm Thermally Broken Door Profile", titleZh: "72mm 断桥隔热门框结构", descEn: "Reinforced polyamide strips prevent thermal bowing (bi-metal effect) even under scorching dark-colour sun exposure.", descZh: "防双金属热弯曲 PA66 断桥设计，即便深色门扇暴晒在珀斯烈日下也绝不变形卡顿。" },
-      { x: 46, y: 62, titleEn: "Drop-Down Automatic Sill Seal", titleZh: "门底自动升降密封条", descEn: "Lowers silently upon closing to seal drafts, dust, and coastal rain against the flush floor track.", descZh: "关门瞬间自动轻柔下压贴合地面，隔绝穿堂风、沙尘与雨水。" },
-      { x: 80, y: 36, titleEn: "Heavy-Duty 250kg Roller / Barrel Hinges", titleZh: "250kg 重型不锈钢承重铰链/滑轮", descEn: "Tested to 200,000+ cycles for effortless fingertip operation on oversized glass doors.", descZh: "通过 20 万次耐久疲劳测试，超大玻璃门扇依然指尖轻推顺滑。" }
+      { x: 44, y: 82, titleEn: "Zero-Barrier Flush Threshold", titleZh: "零阶梯无障碍平门槛", descEn: "Thermally broken low-profile sill with integrated hidden drainage channel eliminates trip hazards.", descZh: "断桥隔热极低平门槛内藏隐蔽排水槽，彻底消除绊脚隐患，婴儿车与轮椅畅通无阻。" },
+      { x: 38.5, y: 52, titleEn: "3-Point Stainless Hook Locking", titleZh: "三点不锈钢钩状防盗锁", descEn: "Hardened steel hook bolts lock upward and downward into reinforced strike plates for RC3 security.", descZh: "加厚不锈钢钩舌多点深入门框锁座咬合，强力防撬防拉拔，达 RC3 安防标准。" },
+      { x: 67.5, y: 66, titleEn: "72mm Thermally Broken Door Profile", titleZh: "72mm 断桥隔热门框结构", descEn: "Reinforced polyamide strips prevent thermal bowing (bi-metal effect) even under scorching dark-colour sun exposure.", descZh: "防双金属热弯曲 PA66 断桥设计，即便深色门扇暴晒在珀斯烈日下也绝不变形卡顿。" },
+      { x: 55, y: 70, titleEn: "Drop-Down Automatic Sill Seal", titleZh: "门底自动升降密封条", descEn: "Lowers silently upon closing to seal drafts, dust, and coastal rain against the flush floor track.", descZh: "关门瞬间自动轻柔下压贴合地面，隔绝穿堂风、沙尘与雨水。" },
+      { x: 67.5, y: 83.5, titleEn: "Heavy-Duty 250kg Roller / Barrel Hinges", titleZh: "250kg 重型不锈钢承重铰链/滑轮", descEn: "Tested to 200,000+ cycles for effortless fingertip operation on oversized glass doors.", descZh: "通过 20 万次耐久疲劳测试，超大玻璃门扇依然指尖轻推顺滑。" }
     ],
     bentoHero: {
       tagEn: "Indoor-Outdoor Door Flagship", tagZh: "德系高端入户与庭院门旗舰",
