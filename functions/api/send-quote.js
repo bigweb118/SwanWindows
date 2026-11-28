@@ -1,11 +1,31 @@
 // Cloudflare Pages Function: /api/send-quote
 // Seamlessly forwards inquiries to info@swanwindows.com.au via Resend API (<100ms response)
 
-export async function onRequestOptions() {
+function getAllowedOrigin(request) {
+  const origin = request.headers.get("Origin") || "";
+  if (
+    origin === "https://www.swanwindows.com.au" ||
+    origin === "https://swanwindows.com.au" ||
+    /^https:\/\/([a-z0-9-]+\.)?swanview-windows\.pages\.dev$/.test(origin) ||
+    /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)
+  ) {
+    return origin;
+  }
+  return "https://www.swanwindows.com.au";
+}
+
+function clampText(val, maxLen, fallback = "") {
+  if (val == null) return fallback;
+  const s = String(val).trim();
+  return s ? s.slice(0, maxLen) : fallback;
+}
+
+export async function onRequestOptions(context) {
   return new Response(null, {
     status: 204,
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": getAllowedOrigin(context.request),
+      "Vary": "Origin",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Accept",
       "Access-Control-Max-Age": "86400"
@@ -15,13 +35,19 @@ export async function onRequestOptions() {
 
 export async function onRequestPost(context) {
   const corsHeaders = {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": getAllowedOrigin(context.request),
+    "Vary": "Origin",
     "Content-Type": "application/json"
   };
 
   try {
     const { request, env } = context;
     const data = await request.json().catch(() => ({}));
+
+    // Silent honeypot check for bots
+    if (data && data.website) {
+      return new Response(JSON.stringify({ success: true }), { status: 200, headers: corsHeaders });
+    }
 
     const apiKey = env.RESEND_API_KEY;
     if (!apiKey) {
@@ -36,14 +62,24 @@ export async function onRequestPost(context) {
       });
     }
 
-    const {
-      name = "Prospective Client",
-      email = "Not provided",
-      phone = "Not provided",
-      location = "Perth Metro",
-      projectType = "General Inquiry",
-      message = "Request for detailed window schedule and pricing."
-    } = data;
+    const name = clampText(data.name, 120, "Prospective Client");
+    const email = clampText(data.email, 160, "Not provided");
+    const phone = clampText(data.phone, 40, "Not provided");
+    const location = clampText(data.location, 120, "Perth Metro");
+    const projectType = clampText(data.projectType, 120, "General Inquiry");
+    const message = clampText(data.message, 4000, "Request for detailed window schedule and pricing.");
+
+    if (email === "Not provided" && phone === "Not provided") {
+      return new Response(JSON.stringify({
+        success: false,
+        error: "Please provide a phone number or email address."
+      }), {
+        status: 400,
+        headers: corsHeaders
+      });
+    }
+
+    const safeSubject = `[Swan Windows Quote] ${name} - ${location} (${projectType})`.replace(/[\r\n]+/g, " ").slice(0, 200);
 
     // Resend email sender & receiver configuration
     // Since your domain (swanwindows.com.au) is verified in Resend, use it as the 'from' sender!
@@ -122,7 +158,7 @@ export async function onRequestPost(context) {
       from: fromEmail,
       to: toRecipients.length > 0 ? toRecipients : ["info@swanwindows.com.au"],
       reply_to: (email && email.includes("@")) ? email : undefined,
-      subject: `[Swan Windows Quote] ${name} - ${location} (${projectType})`,
+      subject: safeSubject,
       html: htmlBody
     };
 

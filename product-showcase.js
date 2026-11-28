@@ -108,8 +108,8 @@
           ],
           canvas: `
             <div class="demo-xray-box" id="demoXrayBox">
-              <img src="${esc(p.heroImg)}" alt="Heritage exterior" class="demo-xray-layer">
-              <img src="${esc(p.profileImg)}" alt="Modern PA66 thermal break core" class="demo-xray-layer demo-xray-core" id="demoXrayCore">
+              <img src="${esc(p.heroImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="Heritage exterior" class="demo-xray-layer">
+              <img src="${esc(p.profileImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="Modern PA66 thermal break core" class="demo-xray-layer demo-xray-core" id="demoXrayCore">
               <div class="demo-xray-line" id="demoXrayLine"></div>
             </div>`
         };
@@ -499,7 +499,7 @@
 
             <div class="apple-hero-visual-wrapper" data-reveal="zoom">
               <div class="apple-hero-card-blur tilt-card ps-hero-visual-stage" id="heroTiltCard">
-                <img src="${esc(p.heroImg)}" fetchpriority="high" decoding="async" alt="${esc(p.name)}" class="apple-hero-img">
+                <img src="${esc(p.heroImg)}" fetchpriority="high" decoding="async" width="1376" height="768" alt="${esc(p.name)}" class="apple-hero-img">
                 <div class="ps-scan-beam"></div>
                 <div class="hero-chip-floating">
                   ${biSpan(p.chipLabelEn, p.chipLabelZh, "span", "chip-label")}
@@ -536,7 +536,7 @@
                 <div class="engineering-visual-card" id="profileTiltCard">
                   <div class="ps-hotspot-stage" id="hotspotStage">
                     <div class="ps-hotspot-viewport" id="hotspotViewport">
-                      <img src="${esc(p.profileImg)}" loading="lazy" decoding="async" alt="${esc(p.name)} Cross-Section" class="engineering-profile-img">
+                      <img src="${esc(p.profileImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="${esc(p.name)} Cross-Section" class="engineering-profile-img">
                       ${hotspotPinsHtml}
                     </div>
                   </div>
@@ -606,7 +606,7 @@
                     <div class="visual-header">
                       <span class="visual-tag" data-en="Perth Climate Shield" data-zh="西澳极端气候防护盾">Perth Climate Shield</span>
                     </div>
-                    <img src="${esc(p.profileImg)}" loading="lazy" decoding="async" alt="${esc(p.name)} Thermal Shield" class="bento-profile-thumb">
+                    <img src="${esc(p.profileImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="${esc(p.name)} Thermal Shield" class="bento-profile-thumb">
                     <div class="temp-gauge-container">
                       <div class="temp-chip outdoor">
                         <small data-en="Perth Sun" data-zh="室外烈日">Perth Sun</small>
@@ -641,7 +641,7 @@
 
             <div class="thermal-comparison-wrapper" id="thermalSlider" data-reveal="zoom" style="touch-action: pan-y; cursor: ew-resize;">
               <div class="thermal-panel panel-traditional">
-                <img src="${esc(p.thermalImg)}" loading="lazy" decoding="async" alt="Conventional Profile" class="thermal-img">
+                <img src="${esc(p.thermalImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="Conventional Profile" class="thermal-img">
                 <div class="thermal-overlay thermal-hot-overlay"></div>
                 <div class="thermal-label-tag tag-left">
                   ${biSpan(p.thermalCompare.leftLabelEn, p.thermalCompare.leftLabelZh, "strong")}
@@ -650,7 +650,7 @@
               </div>
 
               <div class="thermal-panel panel-hueck">
-                <img src="${esc(p.thermalImg)}" loading="lazy" decoding="async" alt="${esc(p.name)}" class="thermal-img">
+                <img src="${esc(p.thermalImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="${esc(p.name)}" class="thermal-img">
                 <div class="thermal-overlay thermal-cool-overlay"></div>
                 <div class="thermal-label-tag tag-right">
                   ${biSpan(p.thermalCompare.rightLabelEn, p.thermalCompare.rightLabelZh, "strong")}
@@ -712,7 +712,7 @@
         <section class="ps-series-nav" aria-label="Browse other product systems">
           <div class="ps-series-grid">
             <a class="ps-nav-card" href="${esc(prevProduct.url)}">
-              <img class="ps-nav-thumb" src="${esc(prevProduct.heroImg)}" loading="lazy" alt="${esc(prevProduct.name)}">
+              <img class="ps-nav-thumb" src="${esc(prevProduct.heroImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="${esc(prevProduct.name)}">
               <div class="ps-nav-meta">
                 <small data-en="← Previous System" data-zh="← 上一个系统">← Previous System</small>
                 <strong>${esc(prevProduct.name)}</strong>
@@ -725,7 +725,7 @@
                 <strong>${esc(nextProduct.name)}</strong>
                 <span>${esc(nextProduct.shortMetric || "")}</span>
               </div>
-              <img class="ps-nav-thumb" src="${esc(nextProduct.heroImg)}" loading="lazy" alt="${esc(nextProduct.name)}">
+              <img class="ps-nav-thumb" src="${esc(nextProduct.heroImg)}" loading="lazy" decoding="async" width="1376" height="768" alt="${esc(nextProduct.name)}">
             </a>
           </div>
           <div style="text-align:center; margin-top:28px;">
